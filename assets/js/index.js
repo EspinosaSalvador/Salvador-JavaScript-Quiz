@@ -1,3 +1,15 @@
+var containerEl = document.getElementsByClassName("container");
+var startButtonEl = document.getElementById("start-button");
+var quizEl = document.getElementById("quiz");
+var resultsEl = document.getElementById("results");
+var scoreEl = document.getElementById("score");
+var initialsEl = document.getElementById("initials");
+var hideEl = document.getElementsByClassName("hide");
+var quizQuestionsEL = document.getElementById("questions");
+
+var scoreEl = 0;
+var timeleft = 60;
+var timer;
 const quizQuestions = [
   {
     question:
@@ -6,7 +18,7 @@ const quizQuestions = [
       { Text: "getValue()", correct: false },
       { Text: "getElementValue()", correct: false },
       { Text: "document.inputValue()", correct: false },
-      { Text: "document.getElementbyId().value", correct: true },
+      { Text: "document.getElementById().value", correct: true },
     ],
   },
   {
@@ -31,7 +43,7 @@ const quizQuestions = [
   },
   {
     question:
-      "Which methos is used to add a new element to an HTML document in JavaScript?",
+      "Which method is used to add a new element to an HTML document in JavaScript?",
     answers: [
       { Text: "createNode()", correct: false },
       { Text: "createElement()", correct: true },
@@ -100,3 +112,9 @@ const quizQuestions = [
     ],
   },
 ];
+
+startButtonEl.addEventListener("click", startQuiz);
+
+function startQuiz() {
+  startButtonEl.classList.add("hide");
+}
