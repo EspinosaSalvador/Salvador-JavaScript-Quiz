@@ -94,11 +94,11 @@ please continue and select your answer in this example lets say I choose the wro
 
 As you can see in the image below there is a legend that states that 10 sec will be substracted
 
-![wronga answer](./assets/img/wrong-answer.png)
+![wronga answer](./assets/img/wrong-answer%20(2).png)
 
-and if we choose the correct answer. we will be send to the next question right away.
+and if we choose the correct answer. we will be send to the next question right away. and also we will get feedback on if it was correct or not
 
-![correct answer](./assets/img/next-question.png)
+![correct answer](./assets/img/correct.png)
 
 if we let the timer run we will be presented with the end of the quiz with 0 score
 

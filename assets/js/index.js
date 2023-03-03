@@ -44,13 +44,14 @@ const scoreContainer = document.getElementById("score-container");
 const scoreElement = document.getElementById("score");
 const scoreFormContainer = document.getElementById("score-form-container");
 
-let shuffledQuestions, currentQuestionIndex, timerInterval;
+let shuffledQuestions, currentQuestionIndex, timerInterval, points;
 // Start the quiz
 startButton.addEventListener("click", startQuiz);
 // Start the quiz
 function startQuiz() {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  points = 5; // Initialize points to 5 for the first attempt
   scoreElement.textContent = 0;
   quizContainer.style.display = "none";
   scoreContainer.style.display = "none";
@@ -82,6 +83,8 @@ function selectAnswer(index) {
   if (currentQuestion.isCorrectAnswer(index)) {
     currentQuestionIndex++;
     if (currentQuestionIndex < shuffledQuestions.length) {
+      scoreElement.textContent = parseInt(scoreElement.textContent) + points;
+      points = 5; // Reset points to 5 for the next question
       correctLegend.style.display = "block";
       setTimeout(() => {
         correctLegend.style.display = "none";
@@ -92,6 +95,9 @@ function selectAnswer(index) {
     }
   } else {
     subtractTime();
+    if (points > 1) {
+      points -= 2; // Subtract 2 points for each incorrect attempt
+    }
     incorrectLegend.style.display = "block";
     setTimeout(() => {
       incorrectLegend.style.display = "none";
