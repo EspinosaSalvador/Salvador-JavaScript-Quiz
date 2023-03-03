@@ -41,11 +41,11 @@ To install this project please proceed to my [GitHub Repository](https://github.
 
 you should be able to see this,
 
-![Github Repository](./Assets/Img/github-repository.png)
+![Github Repository](./assets/Img/github-repository.png)
 
 Click on code as shown in the image
 
-![Click on Code](./Assets/Img/ssh-key.png)
+![Click on Code](./assets/Img/ssh-key.png)
 
 Copy the SSH key or the HTTPS key and open.
 
@@ -77,18 +77,18 @@ git checkout ＜branchname＞
 
 If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/Salvador-JavaScript-Quiz/pulls).
 
-![Pull request](./Assets/Img/pull-site.png)
+![Pull request](./assets/Img/pull-site.png)
 
 ## What you should be able to see
 
 [here is the link of the webpage on github pages.](https://espinosasalvador.github.io/Salvador-JavaScript-Quiz/)
 
 These is what you should be able to see in the Webpage,
-![Webpage](./Assets/Img/webpage-running.png)
+![Webpage](./assets/Img/webpage-running.png)
 
 Please proceed to click on to start the quiz. 
 
-![here is the quiz running](./Assets/Img/quiz-start.png)
+![here is the quiz running](./assets/Img/quiz-start.png)
 
 please continue and select your answer in this example lets say I choose the wrong answer
 
@@ -102,7 +102,7 @@ and if we choose the correct answer. we will be send to the next question right 
 
 if we let the timer run we will be presented with the end of the quiz with 0 score
 
-![end-quiz](./Assets/Img/0%20score.png)
+![end-quiz](./assets/Img/0%20score.png)
 
 please click on save score so it can be saved in local storage.
 
