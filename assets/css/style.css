@@ -6,8 +6,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 10px 10px;
     padding: 0;
+    text-align: center;
 }
-
+span {
+    font-size: xx-large;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -20,13 +23,13 @@ h1 {
 
 button {
     display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
+    margin: 5px auto;
+    padding: 20px 20px;
     background-color: #4caf50;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -39,8 +42,9 @@ button {
 }
 
 .question {
-    
+    font-size: large;
     color: #4caf50;
+    margin: auto;
 }
 .initials {
     background-color: #4caf50;

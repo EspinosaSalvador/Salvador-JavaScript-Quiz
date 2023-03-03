@@ -77,18 +77,24 @@ function showQuestion() {
 // Select an answer and check if it is correct
 function selectAnswer(index) {
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
+  const correctLegend = document.getElementById("correct-legend");
+  const incorrectLegend = document.getElementById("incorrect-legend");
   if (currentQuestion.isCorrectAnswer(index)) {
     currentQuestionIndex++;
     if (currentQuestionIndex < shuffledQuestions.length) {
-      showQuestion();
+      correctLegend.style.display = "block";
+      setTimeout(() => {
+        correctLegend.style.display = "none";
+        showQuestion();
+      }, 1000);
     } else {
       endQuiz();
     }
   } else {
     subtractTime();
-    answerButtonsElement.innerHTML = "";
-    questionElement.textContent = "Wrong answer - 10 sec";
+    incorrectLegend.style.display = "block";
     setTimeout(() => {
+      incorrectLegend.style.display = "none";
       showQuestion();
     }, 1000);
   }
