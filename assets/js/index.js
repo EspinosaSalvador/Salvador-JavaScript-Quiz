@@ -108,17 +108,28 @@ function startTimer() {
 }
 // Subtract 10 seconds from the timer
 function subtractTime() {
-  const timeLeft = parseInt(document.getElementById("timer").textContent);
+  const timerElement = document.getElementById("timer");
+  let timeLeft = parseInt(timerElement.textContent);
+
   if (timeLeft >= 10) {
-    updateTimer(timeLeft - 10);
+    timeLeft -= 10;
+    timerElement.textContent = timeLeft;
   } else {
     endQuiz();
   }
 }
+
 // Update the timer display
 function updateTimer(timeLeft) {
-  document.getElementById("timer").textContent = timeLeft;
+  const timerElement = document.getElementById("timer");
+  timerElement.textContent = timeLeft;
+
+  // Update timer style to red when time is running low
+  if (timeLeft <= 10) {
+    timerElement.style.color = "red";
+  }
 }
+
 // End the quiz
 function endQuiz() {
   clearInterval(timerInterval);
@@ -137,12 +148,13 @@ function endQuiz() {
   }
 
   // Get the input value of initials
-  const initials = document.getElementById("initials").value.trim();
+
+  const initials = document.getElementById("initials").value;
 
   // Save the score and initials in local storage
   if (initials && score > 0) {
     const scores = JSON.parse(localStorage.getItem("scores")) || [];
-    scores.push({ score, initials });
+    scores.push("initials", initials);
     localStorage.setItem("scores", JSON.stringify(scores));
   }
 }

@@ -37,15 +37,15 @@ the requirements to run this webpage are really low due that we are only using *
 
 ## Installation
 
-To install this project please proceed to my [GitHub Repository](https://github.com/EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez)
+To install this project please proceed to my [GitHub Repository](https://github.com/EspinosaSalvador/Salvador-JavaScript-Quiz)
 
 you should be able to see this,
 
-![Github Repository](./Assets/Img/Github%20Repository.png)
+![Github Repository](./Assets/Img/github-repository.png)
 
 Click on code as shown in the image
 
-![Click on Code](./Assets/Img/SSH.png)
+![Click on Code](./Assets/Img/ssh-key.png)
 
 Copy the SSH key or the HTTPS key and open.
 
@@ -56,7 +56,7 @@ Copy the SSH key or the HTTPS key and open.
 either one of this will work. please proceed to the terminal an put in your Terminal,
 
 ```
-git clone git@github.com:EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez.git
+git clone git@github.com:EspinosaSalvador/Salvador-JavaScript-Quiz.git
 ```
 
 and now you have a copy of the code.
@@ -75,34 +75,47 @@ switch branches putting the following code on your terminal.
 git checkout ＜branchname＞
 ```
 
-If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez/pulls).
+If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/Salvador-JavaScript-Quiz/pulls).
 
-![Pull request](./Assets/Img/Pull%20request.png)
+![Pull request](./Assets/Img/pull-site.png)
 
 ## What you should be able to see
 
+[here is the link of the webpage on github pages.](https://espinosasalvador.github.io/Salvador-JavaScript-Quiz/)
+
 These is what you should be able to see in the Webpage,
-![Webpage](./Assets/Img/Webpage%20working.png)
+![Webpage](./Assets/Img/webpage-running.png)
 
-Please proceed to click on Generate Password. an alert should pop up on your screen like this img
+Please proceed to click on to start the quiz. 
 
-![Pop-up](./Assets/Img/generate%20password.png)
+![here is the quiz running](./Assets/Img/quiz-start.png)
 
-please continue with and click confirm or cancel
+please continue and select your answer in this example lets say I choose the wrong answer
 
-* OK = True or Yes
+As you can see in the image below there is a legend that states that 10 sec will be substracted
 
-* Cancel = False or No
+![wronga answer](./assets/img/wrong-answer.png)
 
-this is the way the password should be seen the webpage.
+and if we choose the correct answer. we will be send to the next question right away.
 
-![Team-page](./Assets/Img/password-true.png)
+![correct answer](./assets/img/next-question.png)
 
-Please use the button copy password to add a copy to your clipboard.
+if we let the timer run we will be presented with the end of the quiz with 0 score
+
+![end-quiz](./Assets/Img/0%20score.png)
+
+please click on save score so it can be saved in local storage.
 
 ## Troubleshooting
 
-The Password Generator is in version 1.0 ,please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez/issues)
+The quiz is in version 1.0, please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/Salvador-JavaScript-Quiz/issues)
+
+this are the known issues.
+
+* LocalStorage is not saving the initials. don't know at the moment what I am missing. would love to hear from you guys what error you see in my code :).
+
+* timer is not staying down. it does go down but after a second it returns to the previous time.
+
 
 ## Next Phase Development
 
